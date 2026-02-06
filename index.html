@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>障害者手帳取得ガイド | スタッフ教育資料</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: linear-gradient(to bottom, #f5f7fa 0%, #e8eef5 100%);
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #2C5F7C 0%, #3a7391 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.03)"/></svg>');
+            opacity: 0.5;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* セクション共通 */
+        section {
+            padding: 60px 40px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #E8935C 0%, #d67d47 100%);
+            color: white;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #2C5F7C;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            color: #718096;
+            font-size: 1.05em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* 導入セクション */
+        .intro-scene {
+            background: #f8f9fb;
+            border-left: 4px solid #E8935C;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .speech-bubble {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .speech-bubble::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: -10px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid white;
+        }
+
+        .speaker {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #2C5F7C;
+        }
+
+        .speaker i {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .thought-cloud {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+            border: 2px dashed #E8935C;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        /* 比較表 */
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 30px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #2C5F7C 0%, #3a7391 100%);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            background: white;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover td {
+            background: #f8f9fb;
+        }
+
+        .handbook-type {
+            display: inline-block;
+            background: #E8935C;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* プロセスタイムライン */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #2C5F7C 0%, #E8935C 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            background: white;
+            border: 3px solid #2C5F7C;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item.active::before {
+            background: #2C5F7C;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .timeline-title {
+            font-size: 1.3em;
+            color: #2C5F7C;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .timeline-stage {
+            display: inline-block;
+            background: #F4D06F;
+            color: #744210;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        /* メリット・デメリットカード */
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid #2C5F7C;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .benefit-icon {
+            font-size: 2.5em;
+            color: #2C5F7C;
+            margin-bottom: 15px;
+        }
+
+        .benefit-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+
+        .benefit-description {
+            color: #718096;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        .benefit-examples {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .benefit-example-item {
+            display: flex;
+            align-items: start;
+            margin: 8px 0;
+            font-size: 0.9em;
+            color: #4a5568;
+        }
+
+        .benefit-example-item i {
+            color: #E8935C;
+            margin-right: 8px;
+            margin-top: 4px;
+            font-size: 0.8em;
+        }
+
+        /* デメリットカード */
+        .concern-card {
+            background: #fff5f5;
+            border-left: 4px solid #E8935C;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .concern-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #c53030;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .concern-title i {
+            margin-right: 10px;
+        }
+
+        .concern-content {
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .counter-perspective {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #2C5F7C;
+            margin-top: 12px;
+        }
+
+        .counter-perspective-label {
+            font-weight: bold;
+            color: #2C5F7C;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .counter-perspective-label i {
+            margin-right: 8px;
+        }
+
+        /* フローチャート */
+        .flow-chart {
+            margin: 40px 0;
+        }
+
+        .flow-step {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .flow-step::after {
+            content: '\f107';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+            color: #cbd5e0;
+        }
+
+        .flow-step:last-child::after {
+            display: none;
+        }
+
+        .flow-step-number {
+            display: inline-block;
+            background: #2C5F7C;
+            color: white;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .flow-step-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+
+        .flow-step-content {
+            color: #4a5568;
+            padding-left: 47px;
+        }
+
+        .flow-detail {
+            background: #f8f9fb;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 12px;
+            font-size: 0.95em;
+        }
+
+        /* アコーディオン */
+        .accordion {
+            margin: 30px 0;
+        }
+
+        .accordion-item {
+            background: white;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: linear-gradient(135deg, #f8f9fb 0%, #e8eef5 100%);
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: linear-gradient(135deg, #e8eef5 0%, #d8e3f0 100%);
+        }
+
+        .accordion-header-text {
+            font-weight: bold;
+            color: #2C5F7C;
+            font-size: 1.1em;
+        }
+
+        .accordion-icon {
+            color: #2C5F7C;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content-inner {
+            padding: 25px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        /* 批判的視点ボックス */
+        .critical-box {
+            background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%);
+            border: 2px solid #F4D06F;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .critical-header {
+            display: flex;
+            align-items: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #744210;
+            margin-bottom: 15px;
+        }
+
+        .critical-header i {
+            font-size: 1.5em;
+            margin-right: 12px;
+        }
+
+        .critical-content {
+            color: #4a5568;
+        }
+
+        .critical-point {
+            margin: 15px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .critical-point::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #F4D06F;
+            font-weight: bold;
+        }
+
+        /* 行動指針ボックス */
+        .action-box {
+            background: linear-gradient(135deg, #e6f7f5 0%, #ccf0eb 100%);
+            border-left: 5px solid #2C5F7C;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .action-header {
+            display: flex;
+            align-items: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2C5F7C;
+            margin-bottom: 15px;
+        }
+
+        .action-header i {
+            margin-right: 12px;
+        }
+
+        .do-dont-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .do-box, .dont-box {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .do-box {
+            background: white;
+            border: 2px solid #48bb78;
+        }
+
+        .dont-box {
+            background: white;
+            border: 2px solid #f56565;
+        }
+
+        .do-title, .dont-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .do-title {
+            color: #48bb78;
+        }
+
+        .dont-title {
+            color: #f56565;
+        }
+
+        .do-title i, .dont-title i {
+            margin-right: 8px;
+        }
+
+        .do-list, .dont-list {
+            list-style: none;
+        }
+
+        .do-list li, .dont-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .do-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        .dont-list li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #f56565;
+            font-weight: bold;
+        }
+
+        /* ハイライトボックス */
+        .highlight-box {
+            background: linear-gradient(135deg, #e6f2ff 0%, #cce5ff 100%);
+            border-left: 5px solid #2C5F7C;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight-box strong {
+            color: #2C5F7C;
+        }
+
+        /* 引用ボックス */
+        .quote-box {
+            border-left: 4px solid #E8935C;
+            padding: 20px 25px;
+            margin: 25px 0;
+            background: #f8f9fb;
+            font-style: italic;
+            color: #4a5568;
+        }
+
+        /* リソースリンク */
+        .resources {
+            margin: 40px 0;
+        }
+
+        .resource-link {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin: 15px 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: #2d3748;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resource-link:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        .resource-icon {
+            font-size: 2em;
+            color: #2C5F7C;
+            margin-right: 20px;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .resource-content {
+            flex: 1;
+        }
+
+        .resource-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            color: #2C5F7C;
+        }
+
+        .resource-description {
+            font-size: 0.95em;
+            color: #718096;
+        }
+
+        .resource-arrow {
+            color: #cbd5e0;
+            font-size: 1.5em;
+        }
+
+        /* フッター */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .footer-note {
+            font-size: 0.95em;
+            opacity: 0.8;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .footer-copyright {
+            font-size: 0.9em;
+            opacity: 0.6;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .section-title {
+                font-size: 1.6em;
+            }
+
+            .do-dont-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.9em;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px;
+            }
+        }
+
+        /* 印刷用スタイル */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+
+            .accordion-content {
+                max-height: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <header>
+            <h1><i class="fas fa-id-card"></i> 障害者手帳取得ガイド</h1>
+            <p class="subtitle">利用者の意思決定を支えるためのスタッフ教育資料</p>
+        </header>
+
+        <!-- 1. 導入:支援現場のリアル -->
+        <section>
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <h2 class="section-title">支援現場のリアル</h2>
+                <p class="section-description">
+                    「手帳、取ったほうがいいですか?」この質問の背景には、複雑な葛藤があります
+                </p>
+            </div>
+
+            <div class="intro-scene">
+                <div class="speech-bubble">
+                    <div class="speaker">
+                        <i class="fas fa-user"></i>
+                        <span>利用者Aさん</span>
+                    </div>
+                    <p>「障害者手帳って、取ったほうがいいんでしょうか...。メリットがあるのは分かるんですけど、なんだか躊躇してしまって。」</p>
+                </div>
+
+                <div class="thought-cloud">
+                    <strong><i class="fas fa-thought-bubble"></i> この質問の背景にあるもの</strong><br>
+                    「障害者」というラベルを受け入れることへの抵抗感 / 周囲の目が気になる / 将来への漠然とした不安 / 手帳がなくても今は何とかなっている / でも、本当は支援が必要かも...
+                </div>
+
+                <div class="speech-bubble">
+                    <div class="speaker">
+                        <i class="fas fa-user-tie"></i>
+                        <span>スタッフBさんの内心</span>
+                    </div>
+                    <p>「メリットは説明できる。でも、この方の心の中にある抵抗感にどう向き合えばいいんだろう。取得を勧めるべき? それとも待つべき? この判断は正しいのかな...。」</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong><i class="fas fa-lightbulb"></i> このガイドの目的</strong><br>
+                手帳取得を「勧める」ためではなく、利用者が自分で納得できる選択をするために必要な情報と視点を、スタッフが提供できるようになること。そして、どんな選択も尊重できる支援者になることです。
+            </div>
+        </section>
+
+        <!-- 2. 障害者手帳とは何か -->
+        <section>
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h2 class="section-title">障害者手帳とは何か</h2>
+                <p class="section-description">
+                    制度の本質を理解することから始めましょう
+                </p>
+            </div>
+
+            <h3 style="color: #2C5F7C; margin-bottom: 25px; font-size: 1.4em;">
+                <i class="fas fa-book-open"></i> 3種類の手帳の違い
+            </h3>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">手帳の種類</th>
+                        <th style="width: 20%;">対象</th>
+                        <th style="width: 25%;">根拠法</th>
+                        <th style="width: 35%;">等級・更新</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="handbook-type">身体障害者手帳</span>
+                        </td>
+                        <td>視覚、聴覚、肢体不自由、内部障害など</td>
+                        <td>身体障害者福祉法</td>
+                        <td>1級〜7級(7級は単独では交付されない)<br><strong>更新:原則不要</strong>(障害状態の変化時のみ)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="handbook-type">療育手帳</span>
+                        </td>
+                        <td>知的障害</td>
+                        <td>知的障害者福祉法<br>(※自治体により名称や等級区分が異なる)</td>
+                        <td>自治体により異なる(例:A・B、最重度・重度・中度・軽度など)<br><strong>更新:定期的に必要な場合あり</strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="handbook-type">精神障害者保健福祉手帳</span>
+                        </td>
+                        <td>精神疾患(統合失調症、うつ病、発達障害など)</td>
+                        <td>精神保健及び精神障害者福祉に関する法律</td>
+                        <td>1級〜3級<br><strong style="color: #c53030;">更新:2年ごとに必須</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="critical-box" style="margin-top: 40px;">
+                <div class="critical-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>批判的視点:「障害」の捉え方</span>
+                </div>
+                <div class="critical-content">
+                    <p style="margin-bottom: 15px;">
+                        障害者手帳制度は<strong>「医学モデル」</strong>に基づいています。つまり、障害を「個人の心身の機能障害」として捉え、それを診断・等級化する仕組みです。
+                    </p>
+                    <p style="margin-bottom: 15px;">
+                        一方、現代の障害福祉の理念は<strong>「社会モデル」</strong>へと移行しつつあります。これは「障害は社会の側にある」という考え方です。例えば、車椅子利用者が建物に入れないのは、「歩けない」ことが問題なのではなく、「段差がある」「エレベーターがない」という社会環境が問題だという視点です。
+                    </p>
+                    <div class="critical-point">
+                        手帳取得は社会的支援を受けるための「現実的な手段」ですが、それは障害を「個人の問題」として固定化するリスクも含んでいます
+                    </div>
+                    <div class="critical-point">
+                        本来必要なのは、手帳がなくても誰もが生きやすい社会の実現です。手帳は「完璧な解決策」ではなく、「現状の社会で使える支援ツール」として理解することが重要です
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 30px;">
+                <strong><i class="fas fa-hands-helping"></i> 任意制度であることの意味</strong><br>
+                障害者手帳の取得は<strong>本人の選択</strong>です。診断があっても、手帳を取得する義務はありません。これは「障害者である」ことを強制されないための重要な仕組みです。逆に言えば、取得しない選択も尊重されるべきものです。
+            </div>
+        </section>
+
+        <!-- 3. なぜ取得を迷うのか -->
+        <section style="background: #f8f9fb;">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <h2 class="section-title">なぜ取得を迷うのか</h2>
+                <p class="section-description">
+                    心理的プロセスを理解することが、適切な支援の第一歩です
+                </p>
+            </div>
+
+            <h3 style="color: #2C5F7C; margin-bottom: 25px; font-size: 1.4em;">
+                <i class="fas fa-brain"></i> 障害受容のプロセス
+            </h3>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-stage">第1段階</div>
+                        <div class="timeline-title">ショック・否認</div>
+                        <p>「自分が障害者だなんて...」「一時的なものだ」と、現実を受け入れられない段階。診断直後に多く見られます。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-stage">第2段階</div>
+                        <div class="timeline-title">怒り・抵抗</div>
+                        <p>「なぜ自分だけが...」という不公平感や、周囲への怒り。この段階では手帳取得を強く拒否することもあります。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-stage">第3段階</div>
+                        <div class="timeline-title">取引・模索</div>
+                        <p>「手帳を取らなくても何とかなるかも」「別の方法があるはず」と、障害以外の解決策を探す段階。<strong>多くの方がこの段階で葛藤しています。</strong></p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-stage">第4段階</div>
+                        <div class="timeline-title">抑うつ・悲嘆</div>
+                        <p>現実を認識し始めるが、喪失感や悲しみを感じる段階。「自分は価値がない」と感じることもあります。</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item active">
+                    <div class="timeline-content">
+                        <div class="timeline-stage">第5段階</div>
+                        <div class="timeline-title">受容・適応</div>
+                        <p>障害を自分の一部として受け入れ、「どう生きるか」に焦点が移る段階。手帳を「使えるツール」として捉えられるようになります。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critical-box">
+                <div class="critical-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>重要な注意点</span>
+                </div>
+                <div class="critical-content">
+                    <div class="critical-point">
+                        このプロセスは<strong>一方通行ではありません</strong>。行きつ戻りつすることが普通です
+                    </div>
+                    <div class="critical-point">
+                        「受容」が最終ゴールという考え方自体が、実は問題を含んでいます。重要なのは「受容」することではなく、<strong>「自分らしく生きること」</strong>です
+                    </div>
+                    <div class="critical-point">
+                        人によっては、手帳を取得しても「受容」の段階に至らないこともあります。それも一つの生き方として尊重されるべきです
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="color: #2C5F7C; margin: 50px 0 25px 0; font-size: 1.4em;">
+                <i class="fas fa-comments"></i> 当事者の具体的な不安の声
+            </h3>
+
+            <div class="benefit-grid">
+                <div class="concern-card">
+                    <div class="concern-title">
+                        <i class="fas fa-user-slash"></i>
+                        アイデンティティの揺らぎ
+                    </div>
+                    <div class="concern-content">
+                        「手帳を持つと、自分が『障害者』として固定されてしまう気がする。今までの自分とは違う存在になってしまうのでは...。」
+                    </div>
+                    <div class="counter-perspective">
+                        <div class="counter-perspective-label">
+                            <i class="fas fa-lightbulb"></i>
+                            支援者の視点
+                        </div>
+                        手帳は「あなたが何者であるか」を定義するものではありません。単に「支援を受ける権利を証明する紙」です。あなたはあなたのままです。
+                    </div>
+                </div>
+
+                <div class="concern-card">
+                    <div class="concern-title">
+                        <i class="fas fa-eye"></i>
+                        周囲の目への恐れ
+                    </div>
+                    <div class="concern-content">
+                        「職場や家族に知られたらどうしよう。偏見の目で見られるかもしれない。『かわいそうな人』と思われたくない。」
+                    </div>
+                    <div class="counter-perspective">
+                        <div class="counter-perspective-label">
+                            <i class="fas fa-lightbulb"></i>
+                            支援者の視点
+                        </div>
+                        手帳の取得・所持は本人以外に通知されません。開示するかどうかも本人の選択です。ただし、この不安の根源には社会のスティグマ(偏見)があり、それ自体が問題です。
+                    </div>
+                </div>
+
+                <div class="concern-card">
+                    <div class="concern-title">
+                        <i class="fas fa-ring"></i>
+                        将来への漠然とした不安
+                    </div>
+                    <div class="concern-content">
+                        「結婚や就職に影響があるのでは? 生命保険に入れなくなる? 一度取得したら、もう『普通の人』には戻れないのでは?」
+                    </div>
+                    <div class="counter-perspective">
+                        <div class="counter-perspective-label">
+                            <i class="fas fa-lightbulb"></i>
+                            支援者の視点
+                        </div>
+                        <strong>手帳は返還できます。</strong>不要になったら返すことも可能です。また、手帳の有無で結婚の資格が変わることはありません。保険については審査がありますが、手帳=加入不可ではありません。
+                    </div>
+                </div>
+
+                <div class="concern-card">
+                    <div class="concern-title">
+                        <i class="fas fa-battery-half"></i>
+                        「今は何とかなっている」感覚
+                    </div>
+                    <div class="concern-content">
+                        「確かに困ることはあるけど、何とか生活できている。わざわざ手帳を取る必要があるのかな...。」
+                    </div>
+                    <div class="counter-perspective">
+                        <div class="counter-perspective-label">
+                            <i class="fas fa-lightbulb"></i>
+                            支援者の視点
+                        </div>
+                        「何とかなっている」ことと「無理をしていない」ことは別です。ただし、本人が不要と感じているなら、それも尊重されるべきです。「念のため取得」を強制する必要はありません。
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 40px;">
+                <strong><i class="fas fa-hand-holding-heart"></i> スタッフに求められる姿勢</strong><br>
+                これらの不安は「非合理的な思い込み」ではありません。社会に実在する偏見や、アイデンティティの根幹に関わる深刻な葛藤です。<strong>「そんなことないですよ」と軽く否定せず、まずは不安を受け止めることが重要です。</strong>
+            </div>
+        </section>
+
+        <!-- 4. メリットの全体像 -->
+        <section>
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <h2 class="section-title">メリットの全体像</h2>
+                <p class="section-description">
+                    客観的な事実として、何ができるようになるのかを理解しましょう
+                </p>
+            </div>
+
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-yen-sign"></i>
+                    </div>
+                    <div class="benefit-title">経済的支援</div>
+                    <div class="benefit-description">
+                        税金や公共サービス利用料の負担が軽減されます
+                    </div>
+                    <div class="benefit-examples">
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>所得税・住民税の障害者控除(本人:27万円、特別障害者:40万円)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>自動車税・軽自動車税の減免(等級による)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>NHK受信料の減免(世帯全員が市町村民税非課税の場合は全額免除)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>携帯電話料金の割引(各キャリアによる独自割引)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="benefit-title">交通費割引</div>
+                    <div class="benefit-description">
+                        移動にかかる費用を大幅に削減できます
+                    </div>
+                    <div class="benefit-examples">
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>鉄道・バス運賃の50%割引(JR、私鉄、路線バスなど)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>航空運賃の割引(国内線で約25〜50%)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>タクシー運賃の1割引(一部地域)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>有料道路通行料金の割引(身体・知的障害、事前登録必要)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="benefit-title">公共施設利用料減免</div>
+                    <div class="benefit-description">
+                        文化・レジャー施設を無料または割引で利用できます
+                    </div>
+                    <div class="benefit-examples">
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>公立の美術館・博物館の入館料無料(本人+介護者1名)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>動物園・水族館・植物園などの入園料無料・割引</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>公営プール・体育館などのスポーツ施設利用料減免</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>映画館の割引(1,000円均一など、映画館による)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="benefit-title">就労支援</div>
+                    <div class="benefit-description">
+                        <strong>雄一郎さんの専門分野</strong>:障害者雇用枠での就職が可能になります
+                    </div>
+                    <div class="benefit-examples">
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>障害者雇用枠での応募・採用(法定雇用率の対象)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>就労移行支援事業所の利用(2年間)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>就労継続支援A型・B型の利用</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ジョブコーチ(職場適応援助者)による支援</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>障害者就業・生活支援センターでの相談</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <div class="benefit-title">医療・福祉サービス</div>
+                    <div class="benefit-description">
+                        医療費や福祉サービスの利用に関する支援が受けられます
+                    </div>
+                    <div class="benefit-examples">
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>自立支援医療(精神通院医療)の利用:医療費の自己負担が原則1割</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>重度心身障害者医療費助成制度(自治体による)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>障害福祉サービス(居宅介護、短期入所、共同生活援助など)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>補装具費の支給(車椅子、補聴器など)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="benefit-title">生活支援</div>
+                    <div class="benefit-description">
+                        日常生活における各種手当や支援制度を利用できます
+                    </div>
+                    <div class="benefit-examples">
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>特別障害者手当(月額27,980円、2024年度、1級程度の重度者対象)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>障害児福祉手当(月額15,220円、2024年度)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>自治体独自の福祉手当(自治体により異なる)</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>公営住宅の優先入居・家賃減額</span>
+                        </div>
+                        <div class="benefit-example-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>駐車禁止除外指定車標章の交付(身体障害等級1〜4級など)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critical-box" style="margin-top: 40px;">
+                <div class="critical-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>批判的視点:メリットの個人差と地域差</span>
+                </div>
+                <div class="critical-content">
+                    <div class="critical-point">
+                        <strong>等級によって受けられる支援が大きく異なります。</strong>例えば、精神障害者保健福祉手帳3級では交通費割引が受けられない自治体もあります
+                    </div>
+                    <div class="critical-point">
+                        <strong>自治体による格差が存在します。</strong>独自の手当や減免制度は住んでいる地域によって全く異なるため、「どこに住んでいるか」で受けられる支援が変わってしまいます
+                    </div>
+                    <div class="critical-point">
+                        <strong>経済状況によっても恩恵が変わります。</strong>税控除は課税所得がある人にしか意味がありません。非課税世帯では税控除のメリットはゼロです
+                    </div>
+                    <div class="critical-point">
+                        これらのメリットは「あれば便利」ですが、<strong>手帳がなくても必要な支援が受けられる社会が本来のあるべき姿</strong>です
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. デメリットと懸念 -->
+        <section style="background: #f8f9fb;">
+            <div class="section-header">
+                <div class="section-number">5</div>
+                <h2 class="section-title">デメリットと懸念</h2>
+                <p class="section-description">
+                    正直に向き合うことで、本当の意思決定ができます
+                </p>
+            </div>
+
+            <div class="quote-box">
+                「メリットだけを強調して取得を勧めるのは、支援者の傲慢です。デメリットも含めて正直に伝え、その上で本人が選ぶことを支えるのが、真の支援です。」
+            </div>
+
+            <h3 style="color: #2C5F7C; margin-bottom: 25px; font-size: 1.4em;">
+                <i class="fas fa-balance-scale"></i> 具体的なデメリットと対処法
+            </h3>
+
+            <div class="concern-card">
+                <div class="concern-title">
+                    <i class="fas fa-heart-broken"></i>
+                    心理的コスト:アイデンティティへの影響
+                </div>
+                <div class="concern-content">
+                    手帳を持つことで「障害者」というアイデンティティを受け入れることになります。これは、自己イメージの大きな変化を伴い、心理的な負担になることがあります。特に、これまで「障害」を意識せずに生きてきた人にとっては、大きな葛藤を生む可能性があります。
+                </div>
+                <div class="counter-perspective">
+                    <div class="counter-perspective-label">
+                        <i class="fas fa-lightbulb"></i>
+                        支援者ができること
+                    </div>
+                    手帳は「あなたを定義するもの」ではなく「支援を受けるための道具」であることを伝える。また、アイデンティティの揺らぎは自然な反応であることを認め、焦らず時間をかけて向き合えるよう支える。
+                </div>
+            </div>
+
+            <div class="concern-card">
+                <div class="concern-title">
+                    <i class="fas fa-users-slash"></i>
+                    社会的スティグマ:偏見や差別のリスク
+                </div>
+                <div class="concern-content">
+                    <strong>残念ながら、社会には障害者に対する偏見が実在します。</strong>職場で開示した場合に昇進に影響が出る、結婚相手の家族に反対される、といった差別的扱いを受ける可能性は、ゼロではありません。これは本人の「思い込み」ではなく、現実のリスクです。
+                </div>
+                <div class="counter-perspective">
+                    <div class="counter-perspective-label">
+                        <i class="fas fa-lightbulb"></i>
+                        支援者ができること
+                    </div>
+                    <strong>開示するかどうかは本人の選択です。</strong>手帳の所持を開示する義務はありません。障害者雇用で働く場合は開示が前提ですが、一般雇用では開示しないことも可能です(ただし、合理的配慮を求める際には開示が必要)。また、差別的扱いは違法であることを伝え、必要に応じて労働局や自治体の相談窓口につなぐ。
+                </div>
+            </div>
+
+            <div class="concern-card">
+                <div class="concern-title">
+                    <i class="fas fa-file-invoice"></i>
+                    手続き的負担:診断書・更新の煩雑さ
+                </div>
+                <div class="concern-content">
+                    <strong>精神障害者保健福祉手帳は2年ごとの更新が必要です。</strong>更新のたびに診断書(文書料:3,000〜5,000円程度)が必要で、経済的・時間的負担があります。また、初回申請時には写真の準備や申請書類の記入など、煩雑な手続きがあります。
+                </div>
+                <div class="counter-perspective">
+                    <div class="counter-perspective-label">
+                        <i class="fas fa-lightbulb"></i>
+                        支援者ができること
+                    </div>
+                    申請・更新の手続きをサポートする(書類の書き方、必要な添付書類の確認など)。また、自治体によっては診断書料の助成制度があることを情報提供する。更新を忘れないようリマインドする仕組みを作る。
+                </div>
+            </div>
+
+            <div class="concern-card">
+                <div class="concern-title">
+                    <i class="fas fa-lock"></i>
+                    プライバシーへの懸念
+                </div>
+                <div class="concern-content">
+                    職場で障害者雇用枠を利用する場合、人事部門には手帳の写しを提出します。また、各種割引を受ける際には手帳を提示するため、「見られたくない人に見られる」リスクがあります。特に、公共の場で手帳を提示することに抵抗を感じる人もいます。
+                </div>
+                <div class="counter-perspective">
+                    <div class="counter-perspective-label">
+                        <i class="fas fa-lightbulb"></i>
+                        支援者ができること
+                    </div>
+                    開示する範囲は本人がコントロールできることを伝える。また、最近ではマイナンバーカードとの一体化が進んでおり、スマートフォンアプリでの提示も可能になりつつあることを情報提供する(ただし、自治体により対応状況は異なる)。
+                </div>
+            </div>
+
+            <div class="concern-card">
+                <div class="concern-title">
+                    <i class="fas fa-question-circle"></i>
+                    将来への不確実性
+                </div>
+                <div class="concern-content">
+                    「一度取得したら、ずっと『障害者』として生きていかなければならないのでは?」「症状が改善しても、手帳を手放せないのでは?」という不安。また、制度が将来変わる可能性への懸念もあります。
+                </div>
+                <div class="counter-perspective">
+                    <div class="counter-perspective-label">
+                        <i class="fas fa-lightbulb"></i>
+                        支援者ができること
+                    </div>
+                    <strong>手帳は返還できます。</strong>障害の状態が改善し、支援が不要になったと判断すれば、いつでも返還可能です。また、更新時に医師が「手帳が不要」と判断すれば、更新しないという選択もできます。「一度取得したら永久に保持しなければならない」というのは誤解であることを明確に伝える。
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 40px; background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%); border-left-color: #f56565;">
+                <strong style="color: #c53030;"><i class="fas fa-exclamation-circle"></i> 最も重要な視点</strong><br>
+                ここに挙げた「デメリット」の多くは、<strong>本人の問題ではなく、社会の側の問題です。</strong>スティグマ(偏見)、差別、制度の不備——これらは本来、社会が解決すべき課題です。「デメリットがあるから取得を諦める」のではなく、「デメリットを生み出している社会を変える」という視点も、支援者として持ち続けることが重要です。
+            </div>
+        </section>
+
+        <!-- 6. 取得プロセス -->
+        <section>
+            <div class="section-header">
+                <div class="section-number">6</div>
+                <h2 class="section-title">取得プロセス</h2>
+                <p class="section-description">
+                    実際の流れを知ることで、具体的なイメージが持てます
+                </p>
+            </div>
+
+            <div class="flow-chart">
+                <div class="flow-step">
+                    <div class="flow-step-title">
+                        <span class="flow-step-number">1</span>
+                        医療機関での診断・診断書取得
+                    </div>
+                    <div class="flow-step-content">
+                        主治医に手帳取得の意思を伝え、診断書を作成してもらいます。初診日から6ヶ月以上経過している必要があります(精神障害者保健福祉手帳の場合)。
+                        <div class="flow-detail">
+                            <strong><i class="fas fa-yen-sign"></i> 費用:</strong> 診断書料 3,000〜5,000円程度(保険適用外)<br>
+                            <strong><i class="fas fa-clock"></i> 期間:</strong> 診断書発行まで1〜2週間程度<br>
+                            <strong><i class="fas fa-info-circle"></i> 注意:</strong> 診断書の様式は自治体ごとに異なる場合があるため、事前に市区町村の窓口で確認
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-step-title">
+                        <span class="flow-step-number">2</span>
+                        市区町村窓口への申請
+                    </div>
+                    <div class="flow-step-content">
+                        住民登録をしている市区町村の障害福祉担当窓口に以下の書類を提出します。
+                        <div class="flow-detail">
+                            <strong><i class="fas fa-file-alt"></i> 必要書類:</strong>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>申請書(窓口で入手、または自治体ホームページからダウンロード)</li>
+                                <li>医師の診断書(または障害年金証書の写し)</li>
+                                <li>本人の顔写真(縦4cm×横3cm、上半身、無帽、背景なし、1年以内撮影)</li>
+                                <li>マイナンバーカード(または通知カード+本人確認書類)</li>
+                            </ul>
+                            <strong><i class="fas fa-info-circle"></i> 注意:</strong> 代理人が申請する場合は、委任状が必要
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-step-title">
+                        <span class="flow-step-number">3</span>
+                        審査・等級判定
+                    </div>
+                    <div class="flow-step-content">
+                        都道府県(または政令指定都市)で審査が行われ、等級が判定されます。診断書の内容に基づき、日常生活や社会生活の制限の程度が評価されます。
+                        <div class="flow-detail">
+                            <strong><i class="fas fa-clock"></i> 期間:</strong> 申請から交付まで約1〜2ヶ月(自治体により異なる)<br>
+                            <strong><i class="fas fa-info-circle"></i> 注意:</strong> 審査の結果、不交付(手帳が発行されない)となる場合もあります。その場合、異議申し立てが可能
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-step-title">
+                        <span class="flow-step-number">4</span>
+                        手帳の交付・受け取り
+                    </div>
+                    <div class="flow-step-content">
+                        審査が完了すると、市区町村の窓口から連絡があります。窓口で手帳を受け取ります。
+                        <div class="flow-detail">
+                            <strong><i class="fas fa-id-card"></i> 受け取り方法:</strong> 本人または代理人が窓口で受け取り(自治体により郵送も可能な場合あり)<br>
+                            <strong><i class="fas fa-calendar-check"></i> 有効期限:</strong> 精神障害者保健福祉手帳は2年間(更新必要)、身体障害者手帳は原則無期限<br>
+                            <strong><i class="fas fa-info-circle"></i> 注意:</strong> 手帳番号、等級、有効期限を確認
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-step">
+                    <div class="flow-step-title">
+                        <span class="flow-step-number">5</span>
+                        各種サービスの利用開始
+                    </div>
+                    <div class="flow-step-content">
+                        交付された手帳を使って、税控除の申請、交通費割引の利用、障害福祉サービスの申請などができます。
+                        <div class="flow-detail">
+                            <strong><i class="fas fa-tasks"></i> 次のステップ:</strong>
+                            <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>勤務先に提出(障害者控除を受ける場合、年末調整で必要)</li>
+                                <li>自立支援医療の申請(医療費の自己負担軽減)</li>
+                                <li>障害福祉サービスの利用申請(就労移行支援など)</li>
+                                <li>交通機関での割引手続き(JRの場合は駅窓口で割引証発行)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critical-box" style="margin-top: 40px;">
+                <div class="critical-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>等級判定の不透明性</span>
+                </div>
+                <div class="critical-content">
+                    <p style="margin-bottom: 15px;">
+                        <strong>等級判定は、必ずしも本人の実感と一致しません。</strong>同じような症状でも、医師の診断書の書き方や、審査担当者の判断により、等級が変わることがあります。
+                    </p>
+                    <div class="critical-point">
+                        「3級だから軽い」「1級だから重い」という単純な理解は誤りです。等級は「日常生活・社会生活の制限の程度」を示すものであり、本人の努力や価値を測るものではありません
+                    </div>
+                    <div class="critical-point">
+                        希望する等級が得られなかった場合、本人は「認められなかった」と感じることがあります。この失望感を受け止め、「等級に関わらず、必要な支援を一緒に探しましょう」と伝えることが重要です
+                    </div>
+                    <div class="critical-point">
+                        逆に、想定より重い等級が出た場合も、「そんなに重いと思われたのか」とショックを受けることがあります。等級判定は支援の入り口であり、本人の全てを定義するものではないことを伝える
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. 批判的考察 -->
+        <section style="background: #f8f9fb;">
+            <div class="section-header">
+                <div class="section-number">7</div>
+                <h2 class="section-title">批判的考察</h2>
+                <p class="section-description">
+                    制度の限界を知ることで、健全な距離感を保てます
+                </p>
+            </div>
+
+            <div class="quote-box">
+                「手帳は万能ではない。むしろ、不完全な制度だからこそ、支援者は制度の『外』にある本人の願いや困難に目を向ける必要がある。」
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-header-text">
+                            <i class="fas fa-question-circle"></i> 手帳があっても解決しない問題
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <strong>手帳は「支援の入り口」であり、「問題の解決」ではありません。</strong>
+                            <ul style="margin: 15px 0; padding-left: 20px; line-height: 2;">
+                                <li><strong>孤独や孤立は解決しない:</strong> 手帳を持っても、人間関係の悩みや社会的孤立が自動的に解消されるわけではありません</li>
+                                <li><strong>就職が保証されるわけではない:</strong> 障害者雇用枠があっても、求人が少ない、希望する仕事がない、採用されないといった現実があります</li>
+                                <li><strong>経済的困窮の根本解決にはならない:</strong> 割引や控除は「軽減」であり、生活を安定させるほどの収入保障ではありません</li>
+                                <li><strong>社会のスティグマは消えない:</strong> 手帳制度が整っていても、偏見や差別は社会に根強く残っています</li>
+                            </ul>
+                            <div class="highlight-box" style="margin-top: 20px;">
+                                <strong>支援者の役割:</strong> 手帳取得後も、本人の生活課題に継続的に向き合い、手帳では解決しない部分を一緒に考え続けることが重要です。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-header-text">
+                            <i class="fas fa-balance-scale"></i> 等級制度の不公平さ
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <strong>等級によって支援が区切られる制度は、本質的に不公平さを含んでいます。</strong>
+                            <ul style="margin: 15px 0; padding-left: 20px; line-height: 2;">
+                                <li><strong>「2級と3級の境界」の問題:</strong> 症状がほぼ同じでも、2級なら交通費割引があり、3級ではない(自治体による)といった不公平が生じます</li>
+                                <li><strong>変動する障害への対応が難しい:</strong> 精神障害のように症状が波のある場合、「良い時」に診断されると低い等級になり、本当に困っている時の支援が受けられないことがあります</li>
+                                <li><strong>「見えない障害」の等級判定の難しさ:</strong> 発達障害や高次脳機能障害など、外見からは分かりにくい障害は、等級判定で実態が反映されにくいことがあります</li>
+                            </ul>
+                            <div class="highlight-box" style="margin-top: 20px;">
+                                <strong>批判的視点:</strong> 等級制度は行政の効率性のために必要ですが、「等級が低い=支援不要」ではありません。支援者は等級に縛られず、本人の実際の困難に目を向けることが求められます。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-header-text">
+                            <i class="fas fa-map-marked-alt"></i> 地域格差の問題
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <strong>住んでいる場所によって、受けられる支援が大きく異なります。</strong>
+                            <ul style="margin: 15px 0; padding-left: 20px; line-height: 2;">
+                                <li><strong>独自手当の有無:</strong> 東京都など独自の手当が充実している自治体と、全くない自治体があります</li>
+                                <li><strong>医療費助成の格差:</strong> 重度心身障害者医療費助成の対象範囲や助成額は自治体によって大きく異なります</li>
+                                <li><strong>交通費割引の対応:</strong> 一部の自治体では精神障害者保健福祉手帳3級でも交通費割引がありますが、多くの自治体ではありません</li>
+                                <li><strong>福祉サービスの地域差:</strong> 就労移行支援事業所の数や質、相談支援体制の充実度も地域により大きく異なります</li>
+                            </ul>
+                            <div class="highlight-box" style="margin-top: 20px;">
+                                <strong>批判的視点:</strong> 「どこに住んでいるか」で支援の内容が変わるのは、本来おかしなことです。ただし、現状ではこの格差は存在するため、支援者は自分の地域の制度を正確に把握し、場合によっては転居も含めた選択肢を情報提供する必要があります。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-header-text">
+                            <i class="fas fa-redo"></i> 更新の負担(精神障害)
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <strong>精神障害者保健福祉手帳は2年ごとの更新が必須です。これは大きな負担です。</strong>
+                            <ul style="margin: 15px 0; padding-left: 20px; line-height: 2;">
+                                <li><strong>経済的負担:</strong> 更新のたびに診断書料(3,000〜5,000円)が必要。2年で1回なので、10年で5回、25,000円程度の負担</li>
+                                <li><strong>手続きの煩雑さ:</strong> 更新を忘れると手帳が失効し、再申請が必要。各種サービスが途切れるリスクがあります</li>
+                                <li><strong>心理的負担:</strong> 更新のたびに「まだ障害者なんだ」と再認識させられる苦痛。回復しているのに更新が必要なケースもあります</li>
+                                <li><strong>等級変動のリスク:</strong> 更新時に等級が下がり、それまで受けていた支援が受けられなくなることがあります</li>
+                            </ul>
+                            <div class="highlight-box" style="margin-top: 20px;">
+                                <strong>批判的視点:</strong> なぜ身体障害者手帳は原則無期限なのに、精神障害者保健福祉手帳だけ2年更新なのか? これは「精神障害は治る可能性がある」という前提ですが、実際には長期にわたり支援が必要な人も多く、更新制度が負担になっています。この制度設計自体が見直されるべき課題です。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-header-text">
+                            <i class="fas fa-user-md"></i> 医学モデルの限界
+                        </span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <strong>手帳制度は「医学モデル」に基づいており、これが根本的な限界を生んでいます。</strong>
+                            <ul style="margin: 15px 0; padding-left: 20px; line-height: 2;">
+                                <li><strong>個人の「障害」を証明しなければならない:</strong> 支援を受けるために、自分が「できない」ことを証明しなければならないという矛盾</li>
+                                <li><strong>社会の側の問題が見えにくくなる:</strong> 手帳制度は個人を支援しますが、社会の障壁(段差、情報保障の欠如、偏見)を除去する動きにはつながりにくい</li>
+                                <li><strong>「治す」ことが前提:</strong> 医学モデルは「障害を治す・軽減する」ことを目指しますが、障害と共に生きることを選択する権利が見えにくくなります</li>
+                            </ul>
+                            <div class="highlight-box" style="margin-top: 20px;">
+                                <strong>社会モデルの視点:</strong> 本来、障害者手帳がなくても、段差がない建物、情報が音声や文字で得られる環境、多様性を尊重する社会があれば、多くの「障害」は消えます。手帳制度を使いながらも、「社会を変える」視点を支援者は持ち続けるべきです。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="critical-box" style="margin-top: 40px;">
+                <div class="critical-header">
+                    <i class="fas fa-fist-raised"></i>
+                    <span>制度批判と実践の両立</span>
+                </div>
+                <div class="critical-content">
+                    <p style="margin-bottom: 15px;">
+                        ここまで述べてきた批判は、「だから手帳制度は不要」という結論ではありません。<strong>現状では、手帳は不完全ながらも有効な支援ツールです。</strong>
+                    </p>
+                    <p style="margin-bottom: 15px;">
+                        支援者に求められるのは、<strong>「制度を批判的に見る目」と「制度を最大限活用する実践」の両立</strong>です。利用者には正直に制度の限界を伝えつつ、その上で「今できる最善の選択」を一緒に考える——これが真の支援です。
+                    </p>
+                    <div class="critical-point">
+                        手帳制度の不完全さを理由に取得を否定するのではなく、「不完全だけど、今はこれが使える」と伝える
+                    </div>
+                    <div class="critical-point">
+                        制度の限界を知った上で、それを補う別の支援(インフォーマルな支援、地域資源、ピアサポートなど)を組み合わせる
+                    </div>
+                    <div class="critical-point">
+                        長期的には、制度改善に向けた声を上げ続ける(当事者の声を政策に届ける活動など)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. スタッフの役割 -->
+        <section>
+            <div class="section-header">
+                <div class="section-number">8</div>
+                <h2 class="section-title">スタッフの役割</h2>
+                <p class="section-description">
+                    情報提供と意思決定支援——この2つを明確に区別しましょう
+                </p>
+            </div>
+
+            <div class="quote-box">
+                「支援者の役割は『答えを教えること』ではなく、『本人が自分で答えを見つけるプロセスを支えること』です。」
+            </div>
+
+            <div class="action-box">
+                <div class="action-header">
+                    <i class="fas fa-tasks"></i>
+                    <span>やるべきこと / やってはいけないこと</span>
+                </div>
+
+                <div class="do-dont-grid">
+                    <div class="do-box">
+                        <div class="do-title">
+                            <i class="fas fa-check-circle"></i>
+                            やるべきこと
+                        </div>
+                        <ul class="do-list">
+                            <li><strong>正確な情報提供:</strong> メリット・デメリットの両方を、偏りなく伝える</li>
+                            <li><strong>感情の受容:</strong> 不安、迷い、抵抗感を否定せず、まず受け止める</li>
+                            <li><strong>選択肢の提示:</strong> 「取得する」「取得しない」「今は保留」全ての選択肢を示す</li>
+                            <li><strong>時間の尊重:</strong> 急がせず、本人のペースで考える時間を保障する</li>
+                            <li><strong>継続的な対話:</strong> 一度決めても、また考えが変わることを前提に、継続的に話し合う</li>
+                            <li><strong>実務的支援:</strong> 取得を決めた場合、申請書類の書き方や手続きをサポート</li>
+                            <li><strong>地域資源の情報提供:</strong> 自治体独自の制度、利用できるサービスを具体的に紹介</li>
+                        </ul>
+                    </div>
+
+                    <div class="dont-box">
+                        <div class="dont-title">
+                            <i class="fas fa-times-circle"></i>
+                            やってはいけないこと
+                        </div>
+                        <ul class="dont-list">
+                            <li><strong>押し付け:</strong> 「絶対に取ったほうがいい」と誘導する</li>
+                            <li><strong>否定:</strong> 「取らないなんてもったいない」と本人の選択を否定する</li>
+                            <li><strong>軽視:</strong> 「そんなこと気にしなくていい」と不安を軽く扱う</li>
+                            <li><strong>急かす:</strong> 「早く決めて」と意思決定を急がせる</li>
+                            <li><strong>代理決定:</strong> 「私があなただったら取る」と自分の価値観を押し付ける</li>
+                            <li><strong>メリットのみ強調:</strong> デメリットや懸念を隠して取得を勧める</li>
+                            <li><strong>スティグマの再生産:</strong> 「障害者になる」といった表現で、偏見を強化する</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="color: #2C5F7C; margin: 50px 0 25px 0; font-size: 1.4em;">
+                <i class="fas fa-hands-helping"></i> エンパワメントの視点
+            </h3>
+
+            <div class="highlight-box">
+                <strong>エンパワメント(Empowerment)とは:</strong><br>
+                利用者が自分自身の力を信じ、主体的に意思決定し、行動できるよう支援することです。手帳取得の場面では、以下のような関わりが重要です。
+            </div>
+
+            <div class="benefit-grid" style="margin-top: 30px;">
+                <div class="benefit-card" style="border-top-color: #E8935C;">
+                    <div class="benefit-icon" style="color: #E8935C;">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="benefit-title">対話を重ねる</div>
+                    <div class="benefit-description">
+                        一度の面談で結論を出すのではなく、何度も対話を重ねます。「今日はどう思いますか?」と、その時々の気持ちを確認し、変化を受け止めます。
+                    </div>
+                </div>
+
+                <div class="benefit-card" style="border-top-color: #E8935C;">
+                    <div class="benefit-icon" style="color: #E8935C;">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <div class="benefit-title">問いかける</div>
+                    <div class="benefit-description">
+                        答えを与えるのではなく、考えを深める問いを投げかけます。「もし手帳があったら、どんなことができそうですか?」「取得しないことで、どんな不安がありますか?」
+                    </div>
+                </div>
+
+                <div class="benefit-card" style="border-top-color: #E8935C;">
+                    <div class="benefit-icon" style="color: #E8935C;">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="benefit-title">強みを見つける</div>
+                    <div class="benefit-description">
+                        「ここまで悩めているということは、自分の人生を大切に考えている証拠ですね」と、葛藤自体を肯定的に捉え直します。
+                    </div>
+                </div>
+
+                <div class="benefit-card" style="border-top-color: #E8935C;">
+                    <div class="benefit-icon" style="color: #E8935C;">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="benefit-title">選択を尊重する</div>
+                    <div class="benefit-description">
+                        どんな選択も、本人が考え抜いた結果なら尊重します。「取得しない」選択も、「今は保留」も、全て正当な選択です。
+                    </div>
+                </div>
+            </div>
+
+            <div class="critical-box" style="margin-top: 40px;">
+                <div class="critical-header">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>「取得しない」選択の尊重</span>
+                </div>
+                <div class="critical-content">
+                    <p style="margin-bottom: 15px;">
+                        <strong>「手帳を取得しない」という選択も、完全に正当な選択です。</strong>支援者がどれだけメリットを説明しても、本人が「今は必要ない」「自分には合わない」と判断したなら、それを尊重することが支援の本質です。
+                    </p>
+                    <div class="critical-point">
+                        「取得しない」選択をした人に対しても、継続的な支援は必要です。手帳がなくても使える支援、インフォーマルな資源、地域のつながりなどを一緒に探します
+                    </div>
+                    <div class="critical-point">
+                        将来、気持ちが変わったときに「やっぱり取得したい」と言える関係性を保つことが重要です。「あの時取得しないって言っちゃったから、今さら言えない」と思わせない配慮が必要
+                    </div>
+                    <div class="critical-point">
+                        「取得しない=支援を拒否している」ではありません。支援の形は手帳だけではないことを、支援者自身が理解することが大切です
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-box" style="margin-top: 40px; background: linear-gradient(135deg, #fff9e6 0%, #fff3cc 100%); border-left-color: #F4D06F;">
+                <div class="action-header" style="color: #744210;">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>具体的な対応例</span>
+                </div>
+                <div style="color: #4a5568;">
+                    <p style="margin-bottom: 15px;"><strong>ケース1:「取得を迷っている」利用者への対応</strong></p>
+                    <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <p style="margin-bottom: 10px;"><strong>利用者:</strong> 「手帳、取ったほうがいいのかな...でも、障害者って呼ばれるのが嫌で...」</p>
+                        <p style="margin-bottom: 10px; color: #2C5F7C;"><strong>NG対応:</strong> 「そんなこと気にしなくていいですよ。メリットがたくさんあるんだから、取ったほうが絶対いいです。」</p>
+                        <p style="color: #48bb78;"><strong>OK対応:</strong> 「『障害者』と呼ばれることに抵抗があるんですね。それは自然な気持ちだと思います。手帳は確かにメリットもありますが、気持ちの整理がつかないまま取得する必要はないですよ。もし良かったら、どんなところに抵抗を感じるのか、もう少し聞かせてもらえますか?」</p>
+                    </div>
+
+                    <p style="margin-bottom: 15px;"><strong>ケース2:「取得しない」と決めた利用者への対応</strong></p>
+                    <div style="background: white; padding: 20px; border-radius: 8px;">
+                        <p style="margin-bottom: 10px;"><strong>利用者:</strong> 「やっぱり手帳は取らないことにします。」</p>
+                        <p style="margin-bottom: 10px; color: #2C5F7C;"><strong>NG対応:</strong> 「え、本当にいいんですか? せっかくメリットがあるのに、もったいないですよ。もう一度考え直してみませんか?」</p>
+                        <p style="color: #48bb78;"><strong>OK対応:</strong> 「分かりました。よく考えて決められたんですね。もし将来、気持ちが変わることがあったら、いつでも相談してください。手帳以外の方法でも、一緒に使える支援を探していきましょう。」</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. まとめ -->
+        <section style="background: linear-gradient(135deg, #e6f2ff 0%, #cce5ff 100%);">
+            <div class="section-header">
+                <div class="section-number">9</div>
+                <h2 class="section-title">まとめ</h2>
+                <p class="section-description">
+                    手帳は手段であり、目的ではありません
+                </p>
+            </div>
+
+            <div class="quote-box" style="background: white; border-left-color: #2C5F7C;">
+                「障害者手帳は、利用者が『自分らしく生きる』ための道具の一つです。その道具を使うかどうかは、本人が決めることです。支援者は、本人が納得できる選択をするために必要な情報と、安心して選べる環境を提供する——それが私たちの役割です。」
+            </div>
+
+            <h3 style="color: #2C5F7C; margin: 40px 0 25px 0; font-size: 1.4em;">
+                <i class="fas fa-key"></i> 支援者が忘れてはいけない5つの原則
+            </h3>
+
+            <div class="benefit-grid">
+                <div class="benefit-card" style="border-top-color: #2C5F7C;">
+                    <div class="benefit-icon" style="color: #2C5F7C;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="benefit-title">1. 本人の自己決定を最優先</div>
+                    <div class="benefit-description">
+                        どんなに「取得したほうがいい」と思っても、決めるのは本人です。支援者の価値観を押し付けず、本人の意思を尊重します。
+                    </div>
+                </div>
+
+                <div class="benefit-card" style="border-top-color: #2C5F7C;">
+                    <div class="benefit-icon" style="color: #2C5F7C;">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="benefit-title">2. 正確な情報提供</div>
+                    <div class="benefit-description">
+                        メリットだけでなく、デメリットや制度の限界も正直に伝えます。情報を隠して誘導することは、支援ではなく操作です。
+                    </div>
+                </div>
+
+                <div class="benefit-card" style="border-top-color: #2C5F7C;">
+                    <div class="benefit-icon" style="color: #2C5F7C;">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="benefit-title">3. 感情の受容</div>
+                    <div class="benefit-description">
+                        不安、抵抗感、葛藤——これらは「非合理的」ではありません。まず受け止め、寄り添うことから始めます。
+                    </div>
+                </div>
+
+                <div class="benefit-card" style="border-top-color: #2C5F7C;">
+                    <div class="benefit-icon" style="color: #2C5F7C;">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="benefit-title">4. 時間をかける</div>
+                    <div class="benefit-description">
+                        意思決定を急がせません。何度も揺れ動くことを前提に、継続的な対話の場を提供します。
+                    </div>
+                </div>
+
+                <div class="benefit-card" style="border-top-color: #2C5F7C;">
+                    <div class="benefit-icon" style="color: #2C5F7C;">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="benefit-title">5. 批判的視点を持つ</div>
+                    <div class="benefit-description">
+                        手帳制度は完璧ではありません。制度の限界を知った上で、それを補う支援を組み合わせる柔軟性が必要です。
+                    </div>
+                </div>
+
+                <div class="benefit-card" style="border-top-color: #2C5F7C;">
+                    <div class="benefit-icon" style="color: #2C5F7C;">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="benefit-title">継続的な支援</div>
+                    <div class="benefit-description">
+                        取得しても、しなくても、支援は続きます。「取得=ゴール」ではなく、その先の生活を一緒に考え続けることが真の支援です。
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 40px; background: white; border-left-color: #E8935C;">
+                <strong style="color: #E8935C;"><i class="fas fa-bullhorn"></i> 最後に</strong><br>
+                障害者手帳は「障害者であることの証明書」ではありません。<strong>「必要な支援を受ける権利の証明書」</strong>です。そして、その権利を行使するかどうかは、本人が決めることです。<br><br>
+                私たちスタッフは、本人の選択を支える「伴走者」です。答えを教える「指導者」ではありません。迷いに寄り添い、情報を提供し、どんな選択も尊重する——その姿勢こそが、エンパワメントに基づく支援です。
+            </div>
+        </section>
+
+        <!-- リソース -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title"><i class="fas fa-link"></i> 参考情報・相談窓口</h2>
+                <p class="section-description">
+                    より詳しい情報や支援が必要な場合は、こちらをご活用ください
+                </p>
+            </div>
+
+            <div class="resources">
+                <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/index.html" class="resource-link" target="_blank" rel="noopener noreferrer">
+                    <div class="resource-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-title">厚生労働省 障害者福祉</div>
+                        <div class="resource-description">障害者手帳制度の公式情報、最新の制度改正など</div>
+                    </div>
+                    <div class="resource-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.mhlw.go.jp/kokoro/support/3_06notebook.html" class="resource-link" target="_blank" rel="noopener noreferrer">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-title">厚生労働省 精神障害者保健福祉手帳</div>
+                        <div class="resource-description">精神障害者保健福祉手帳の詳細情報</div>
+                    </div>
+                    <div class="resource-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.rehab.go.jp/" class="resource-link" target="_blank" rel="noopener noreferrer">
+                    <div class="resource-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-title">国立障害者リハビリテーションセンター</div>
+                        <div class="resource-description">障害者支援に関する専門的な情報</div>
+                    </div>
+                    <div class="resource-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+
+                <a href="https://www.jeed.go.jp/" class="resource-link" target="_blank" rel="noopener noreferrer">
+                    <div class="resource-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="resource-content">
+                        <div class="resource-title">JEED 独立行政法人高齢・障害・求職者雇用支援機構</div>
+                        <div class="resource-description">障害者雇用、就労支援に関する情報</div>
+                    </div>
+                    <div class="resource-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <strong><i class="fas fa-phone"></i> お住まいの地域での相談先</strong><br>
+                    • <strong>市区町村の障害福祉窓口:</strong> 手帳申請、福祉サービスの相談<br>
+                    • <strong>基幹相談支援センター:</strong> 障害福祉に関する総合的な相談<br>
+                    • <strong>障害者就業・生活支援センター:</strong> 就労と生活の両面からの支援<br>
+                    • <strong>精神保健福祉センター:</strong> 精神障害に関する専門的な相談<br>
+                    • <strong>発達障害者支援センター:</strong> 発達障害に関する専門的な相談
+                </div>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-note">
+                    このガイドは、KBC(Kizuki Business College)における障害者手帳取得支援の質向上を目的としたスタッフ教育資料です。利用者の自己決定を尊重し、エンパワメントに基づく支援を実践するための参考資料としてご活用ください。
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 KBC (Kizuki Business College) | 障害者雇用・就労移行支援</p>
+                    <p style="margin-top: 10px; font-size: 0.85em;">作成協力: Claude (Anthropic)</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // アコーディオン機能
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.parentElement;
+                const content = item.querySelector('.accordion-content');
+                const isActive = item.classList.contains('active');
+                
+                // 全てのアコーディオンを閉じる
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.accordion-content').style.maxHeight = null;
+                });
+                
+                // クリックされたアコーディオンを開く(既に開いていた場合は閉じる)
+                if (!isActive) {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ページ読み込み時のアニメーション(オプション)
+        window.addEventListener('load', function() {
+            document.querySelectorAll('section').forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
